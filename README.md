@@ -28,7 +28,11 @@ To get a local copy up and running follow these simple steps.
 ```sh
   cd blog-app
 ```
+- **Install bundle**
 
+```sh
+  cd blog-app
+```
 - **Open folder in VSC**
 
 ```sh
