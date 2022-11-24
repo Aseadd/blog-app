@@ -1,24 +1,68 @@
-# README
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![ruby on rails](https://img.shields.io/badge/-ruby-red) 
+# School Library:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- A blog app used to share posts and interact with likes and comments among users
 
-Things you may want to cover:
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To get a local copy up and running follow these simple steps.
 
-* Configuration
+### Prerequisites
 
-* Database creation
+- Any ruby editor
 
-* Database initialization
+### Setup
 
-* How to run the test suite
+- Open the terminal on your computer
+- Navigate through directories using [change directory (cd)](https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10) command to where you want to clone the repository.
+- Type the following command then press ENTER:
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+  git clone git@github.com:Aseadd/blog-app.git
+```
 
-* Deployment instructions
+- The terminal will send to you information about your download.
+- Type the following command then press ENTER:
 
-* ...
+```sh
+  cd blog-app
+```
+
+- **Open folder in VSC**
+
+```sh
+  code .
+```
+- **To execute the program**
+
+```sh
+  rails s
+```
+
+## Built With
+
+- **Ruby on Rails:** Ruby on Rails
+
+## Authors
+
+### 👤 Addis Tsega
+
+- GitHub: [@Aseadd](https://github.com/Aseadd)
+- Twitter: [@AdaTsega](https://twitter.com/AdaTsega)
+- LinkedIn: [Addis Tsega](https://www.linkedin.com/in/addis-tsega/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Aseadd/metrics-webapp-crypto/issues).
+
+## Show your support
+
+- Give a ⭐️ if you like this project!
+
+## 📝 License
+
+- This project is [MIT](./LICENSE) licensed.
