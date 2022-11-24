@@ -51,7 +51,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Ruby Blog App <a name="about-project"></a>
 
-![screenshot](./blog_app_erd.png)
+![screenshot](./ERD-diagram.png)
 
 > The **Ruby Blog App** is an example of a blog website. It will enable a blogger to create posts and users can comment and put their likes.
 
