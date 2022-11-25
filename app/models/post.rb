@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   after_save :update_post_counter
   after_destroy :update_posts_down
 
+  private
+
   def update_post_counter
     author.increment!(:posts_counter)
   end
