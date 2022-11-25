@@ -5,9 +5,9 @@ class Post < ApplicationRecord
 
   after_save :update_post_counter
   after_destroy :update_posts_down
-  
+
   def update_post_counter
-        author.increment!(:posts_counter)
+    author.increment!(:posts_counter)
   end
 
   def recent_comments
@@ -17,5 +17,4 @@ class Post < ApplicationRecord
   def update_posts_down
     author.update_columns('posts_counter' => author.posts_counter - 1)
   end
-
 end
