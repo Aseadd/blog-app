@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def recent_posts
     posts.order(created_at: :desc).limit(3)
   end
+
+  def find_all_posts
+    posts.find_by(author_id: id)
+  end
 end
