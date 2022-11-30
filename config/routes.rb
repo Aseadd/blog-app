@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # Get to teh user controller
-  get "/users", to: "users#index"
-  get "/users/:id", to: "users#show"
-  get "/users/:id/posts", to: "posts#show"
-  get "/users/:id/posts/:post_id", to: "posts#show"
+  # get "/users", to: "users#index"
+  # get "/users/:id", to: "users#show"
+  # get "/users/:id/posts", to: "posts#show"
+  # get "/users/:id/posts/:post_id", to: "posts#show"
+
+  resources :users, only: [:index, :show] 
+  resources :posts, only: [:index, :show]
 
 
 end
