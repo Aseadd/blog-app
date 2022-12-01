@@ -10,7 +10,7 @@ comments <%= post.comments.length %> likes <%= post.likes.length%>
 <div class = 'comments-section'>
         <% post.comments.each do |comment|%>
             <div class = 'comment-info'>
-            <span class='comment-title'> Comment # <%= comment.id%> </span>
+            <span class='comment-title'> Comment  <%= comment.id%> </span>
                 <%= comment.text%>
             </div>
         <% end %>
