@@ -1,0 +1,33 @@
+<div class = "user-container" id = 'user_<% @user.id%>' >
+
+<div class = 'user-info'>
+    <img src = "<%= @user.photo %>" class = "user-avatar">
+    <%= @user.name%>
+    <div class = 'post-counter'>
+    Number of posts <%= @user.posts.length%>
+    </div>
+    
+</div>
+<div class= 'user-bio'>
+    <span class= 'bio-title'> Bio</span>
+    <%= @user.bio%>
+    </div>
+
+<div class = 'posts-container'>
+    <% @user.posts.each do |post|%>
+    <div class = 'post-info'>
+    <span class='post-title'> Post # <%= post.id%> </span>
+        <%= post.title%>
+        <%= post.text%>
+        <div class = 'comment-like-counter'>
+    comments <%= @user.comments.length %> likes <%= @user.likes.length%>
+        </div>
+    </div>
+    <% end %>
+<button class ='see-more'> See more Posts </button>
+</div>
+
+</div>
+
+
+
