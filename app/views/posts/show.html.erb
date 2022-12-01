@@ -1,1 +1,26 @@
-<h1>Here is list of posts for a User</h1>
+<div class = "user-container"  >
+
+<div class = 'posts-container'>
+    <div class = 'post-info'>
+    <span class='post-title'> Post # <%= @post.id%> </span>
+        <%= @post.title%>
+        <%= @post.text%>
+        <div class = 'comment-like-counter'>
+    comments <%= @post.comments.length %> likes <%= @post.likes.length%>
+        </div>
+    </div>
+    <div class = 'comments-container'> 
+        <% @post.comments.each do |comment|%>
+        <div class = 'comment-info'>
+        <span class='comment-title'> Comment # <%= comment.id%> </span>
+            <%= comment.text%>
+        </div>
+        <% end %>
+    </div>
+<button class ='see-more'> See more Posts </button>
+</div>
+
+</div>
+
+
+
