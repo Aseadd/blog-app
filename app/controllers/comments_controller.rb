@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
-
-  def new 
+  def new
     @comment = Comment.new
   end
 
@@ -8,10 +7,10 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.new(comment_params)
     @comment.post_id = params[:post_id]
     if @comment.save
-      flash[:notice] = "Comment is saved successfully."
+      flash[:notice] = 'Comment is saved successfully.'
       redirect_to user_post_path(current_user, @comment.post)
     else
-      flash[:alert] = "Comment is not saved."
+      flash[:alert] = 'Comment is not saved.'
       render :create
     end
   end
@@ -21,5 +20,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text)
   end
-
 end
