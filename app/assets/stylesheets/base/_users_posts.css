@@ -5,6 +5,13 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: tomato;
+  text-align: center;
+}
+
 .user-container {
   display: flex;
   flex-direction: column;
@@ -101,4 +108,36 @@
   padding: 20px 20px;
   font-size: 16px;
   border-radius: 10px;
+}
+
+.add-post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.label-info {
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+}
+
+.submit-btn {
+  border: 1px solid blue;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+}
+
+.add-comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 20px;
+  text-align: center;
+  align-items: center;
 }
