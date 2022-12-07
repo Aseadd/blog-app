@@ -1,29 +1,22 @@
-<div class = "user-container"  >
-
-<div class = 'posts-container'>
-    <div class = 'post-info'>
-    <span class='post-title'> Post # <%= @post.id%> </span>
-        <%= @post.title%>
-        <%= @post.text%>
-        <div class = 'comment-like-counter'>
-    comments <%= @post.comments.length %> likes <%= @post.likes.length%>
-        </div>
+<section class="single-post">
+  <div class="post-container container">
+    <div class="post-container_title">
+      <h3 class="post-container_heading"><%= @post_current.title %>
+        #<%= @post_current.id %>
+        by
+        <%= @post_current.author.name %></h3>
+      <div class="post-container_stats">
+        <%= render partial: "shared/like_form" %>
+        <p>Comments:
+          <%= @post_current.comments_counter %></p>
+        <p>Likes:
+          <%= @post_current.likes_counter %></p>
+      </div>
     </div>
-    <div class = 'comments-container'> 
-        <% @post.comments.each do |comment|%>
-        <div class = 'comment-info'>
-        <span class='comment-title'> Comment # <%= comment.id%> </span>
-            <%= comment.text%>
-        </div>
-        <% end %>
-    </div>
-    <section>
-    <%= render "shared/add_like"%>
-  </section>
-<button class ='see-more'> See more Posts </button>
-</div>
-
-</div>
-
-
-
+    <p class="post-container_text"><%= @post_current.text %></p>
+  </div>
+  <div class="post-comments container">
+    <%= render partial: "shared/comment", collection: @post_current.comments %>
+    <%= render partial: "shared/comment_form" %>
+  </div>
+</section>
