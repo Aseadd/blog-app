@@ -1,31 +1,40 @@
 class PostsController < ApplicationController
-  def index
-    @posts = Post.all
-  end
+  before_action :current_user
 
-  def new
-    @post = Post.new
+  def index
+    @posts = @user.posts
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post_current = Post.find(params[:id])
+  end
+
+  def new
+    @post_current = Post.new
+    respond_to do |format|
+      format.html { render :new }
+    end
   end
 
   def create
-    @post = current_user.posts.new(post_params)
-
-    if @post.save
-      flash[:notice] = 'Post is saved successfully.'
-      redirect_to users_path(current_user, @post)
-    else
-      render :new
-      flash[:alert] = 'Post is not saved.'
+    respond_to do |format|
+      format.html do
+        values = params.require(:post).permit(:title, :text)
+        @new_post = Post.new(author: @user, title: values[:title], text: values[:text])
+        if @new_post.save
+          flash[:success] = 'Post was saved'
+          redirect_to action: :index, user_id: @user.id
+        else
+          flash.now[:error] = 'Error: Post already liked'
+          render :new
+        end
+      end
     end
   end
 
   private
 
-  def post_params
-    params.require(:post).permit(:title, :text)
+  def current_user
+    @user = User.find(params[:user_id])
   end
 end
