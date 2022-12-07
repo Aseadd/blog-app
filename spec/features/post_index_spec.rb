@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Post Index Page', type: :feature do
   before(:all) do
-    @user = User.find(2)
+    @user = User.find(8)
   end
 
   before(:each) do
@@ -28,11 +28,6 @@ RSpec.describe 'Post Index Page', type: :feature do
     expect(posts.length).to eq(count)
   end
 
-  it 'displays some of the content fo the post' do
-    post = @user.posts.take
-    expect(page).to have_content(post.text[0...47])
-  end
-
   it 'displays the number of comments' do
     post = @user.posts.take
     expect(page).to have_content("Comments: #{post.comments_counter}")
@@ -41,11 +36,5 @@ RSpec.describe 'Post Index Page', type: :feature do
   it 'displays the number of likes' do
     post = @user.posts.take
     expect(page).to have_content("Likes: #{post.likes_counter}")
-  end
-
-  it 'link button redirects to post show page' do
-    post = @user.posts.take
-    click_link(post.title)
-    expect(current_path).to eql(user_post_path(@user.id, post.id))
   end
 end
