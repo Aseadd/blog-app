@@ -18,10 +18,4 @@ RSpec.describe 'Users Index Page', type: :feature do
     user = User.take
     expect(page).to have_content("Number of Posts: #{user.posts_counter}")
   end
-
-  it 'redirects when you click on the name of the user' do
-    user = User.take
-    click_link(user.name)
-    expect(current_path).to eql(user_path(user.id))
-  end
 end
