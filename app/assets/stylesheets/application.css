@@ -182,3 +182,65 @@ button {
   font-weight: 700;
   cursor: pointer;
 }
+
+/* ### Sign-up form ### */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: tomato;
+}
+
+.other-links {
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+}
+
+.field {
+  margin: 10px 10px;
+}
+
+input {
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.remember-checkbox {
+  border: none;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #033860;
+}
+
+.actions {
+  width: 100px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px auto;
+}
