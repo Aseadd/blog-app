@@ -235,3 +235,14 @@ label {
   background-color: #033860;
 }
 
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px auto; 
+}
