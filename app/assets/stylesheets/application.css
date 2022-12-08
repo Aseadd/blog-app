@@ -199,14 +199,13 @@ button {
 h2 {
   font-size: 2rem;
   text-align: center;
-  color: tomato;  
+  color: tomato;
 }
 
 .other-links {
   align-items: center;
   font-size: 16px;
   text-align: center;
-
 }
 
 .field {
@@ -227,14 +226,12 @@ label {
   font-size: 1.2rem;
   font-weight: 700;
   color: #033860;
-
 }
 
 .actions {
   width: 40px;
   background-color: #033860;
 }
-
 
 .login-form {
   display: flex;
@@ -244,5 +241,5 @@ label {
   align-items: center;
   border: 1px solid black;
   border-radius: 20px;
-  margin: 20px auto; 
+  margin: 20px auto;
 }
