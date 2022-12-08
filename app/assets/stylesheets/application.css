@@ -213,13 +213,15 @@ h2 {
 }
 
 input {
-  width: 400px;
   height: 40px;
   font-size: 1.2rem;
-  outline: 1px solid blue;
   background-color: #fff;
   border-radius: 4px;
-  padding: 0 10px;
+}
+
+.remember-checkbox {
+  border: none;
+  align-items: flex-start;
 }
 
 label {
@@ -229,8 +231,7 @@ label {
 }
 
 .actions {
-  width: 40px;
-  background-color: #033860;
+  width: 100px;
 }
 
 .login-form {
